@@ -11,7 +11,8 @@
       var nameApp = angular.module('nameApp',  ['restangular']);
       
       nameApp.config(function(RestangularProvider) {
-        RestangularProvider.setBaseUrl('http://localhost:8080');
+        //RestangularProvider.setBaseUrl('http://localhost:8080');
+        RestangularProvider.setBaseUrl('http://restangularexamplea.cfapps.io');
       });
 
       nameApp.controller('NameCtrl', function ($scope, Restangular){
@@ -73,6 +74,10 @@
     <a href="" ng-click="addWishlist()">addWishlist</a> ($scope.wishlists.post ( newWishList ))
    <pre  style="background-color:#FFCCCC;">But..  
    what is this npm thingy?
+    </pre>
+
+    <pre>
+
     </pre>
    
   </body>
