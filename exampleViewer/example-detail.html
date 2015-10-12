@@ -1,0 +1,19 @@
+<div class="top-split">
+  <div class="top-left">
+    <div class="centered">
+      hybris Angular Workshop 20151014<br><br>
+
+      <p><a href="{{runUrl}}" target="_blank" > Example {{example.number}} <br>{{example.message}}</a></p>
+
+      (Material adapted from  <a href="https://www.youtube.com/watch?v=TRrL5j3MIvo">Curran Kelleher</a>)
+    </div>
+  </div>
+  <div class="top-right">
+    <iframe ng-src="{{runUrl}}" frameBorder="0"></iframe>
+  </div>
+</div>
+<div ng-bind-html="readme"></div>
+<div ng-repeat="file in example.files">
+  <div class="file-name">{{file}}</div>
+  <textarea file="file" example="example"></textarea>
+</div>

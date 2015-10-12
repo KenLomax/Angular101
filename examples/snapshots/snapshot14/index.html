@@ -1,0 +1,57 @@
+<html ng-app="myModuleName">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.10/angular-route.min.js"></script>
+    <script>
+      var myModule = angular.module('myModuleName', ['ngRoute']);
+
+      myModule.config(function($routeProvider) {
+      
+        $routeProvider.
+          when('/', {
+            template: '<h3>View 1:</h3> <ul><li ng-repeat="country in countries"><a href="#/{{country.name}}">{{country.name}}</a></li><ul>',
+            controller: 'CountryListCtrl'
+          }).
+          when('/:countryName', {
+            template: '<h3>View 2:</h3>' ,
+            controller: 'CountryDetailCtrl'
+          }).
+          otherwise({
+            redirectTo: '/'
+          });
+      });
+
+      myModule.controller('CountryListCtrl', function ($scope, $http){
+        $http.get('countries.json').success(function(data) {
+          $scope.countries = data;
+        });
+      });
+
+      myModule.controller('CountryDetailCtrl', function ($scope, $routeParams){
+        console.log("$routeParams object is: ");
+        console.log($routeParams);
+      });
+    </script>
+  </head>
+  <body>
+ <pre  style="background-color:#D1FFD1;">Note:  
+    including router library
+    ng-view directive
+    using *config* in our module
+    added routeProvider injection
+    routeProvider maps path to view & controller 
+    path can have place holders
+    can use template, or templateUrl
+    our module now has two controllers - one for each view - injected with different parameters
+    page back and forward buttons are supported
+    </pre>
+
+    <div ng-view></div>
+
+   <pre  style="background-color:#FFCCCC;">But..  
+
+    </pre>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<html ng-app="countryApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+      var countryApp = angular.module('countryApp', []);
+      countryApp.controller('CountryCtrl', function ($scope, $http){
+        $http.get('countries.json').success(function(data) {
+          $scope.countries = data;
+        });
+
+//        Caching also supported..
+//          $http({
+//              method: 'GET',
+//              url: 'countries.json',
+//              cache: true
+//            })
+
+      });
+    </script>
+  </head>
+  <body ng-controller="CountryCtrl">
+ <pre  style="background-color:#D1FFD1;">Note:  
+  using $http to fetch the json data 
+  an asynchronous callback (a "<b>promise</b>") is used to accept the data once available
+  this could be on another server
+  we can also ask $http to cache this data..
+   </pre>
+    <table>
+      <tr>
+        <th>Country</th>
+        <th>Population</th>
+      </tr>
+      <tr ng-repeat="country in countries">
+        <td>{{country.name}}</td>
+        <td>{{country.population}}</td>
+      </tr>
+    </table>
+  <pre  style="background-color:#FFCCCC;">But..  
+  Injection works by recognizing key words like "$scope", "$http".  How do we make our code "minification proof"?
+  </pre>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<html ng-app="nameApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+      var nameApp = angular.module('nameApp', []);
+      nameApp.factory('myFactory',  function() {
+        var factory = {};
+        var myData = [1,2,3,4];
+        factory.getMyData = function() {
+          return myData;
+        };
+        return factory;
+      });
+
+      nameApp.controller('NameCtrl', function ($scope, myFactory){
+        $scope.dataViaFactory = myFactory.getMyData();
+      });
+    </script>
+  </head>
+  <body ng-controller="NameCtrl">
+  <pre  style="background-color:#D1FFD1;">Note:  
+   we are using a Factory to encapsulate functionality
+    we inject that into the controller and use it
+    this could be used by other controllers too.
+    Factories, Services, Providers are all similar solutions.
+  </pre>
+    <ul>
+      <li ng-repeat="name in dataViaFactory">{{name}}</li>
+    </ul>
+
+   <pre  style="background-color:#FFCCCC;">But..  
+   ok I have the basics of Angular, and I know where to find out more.
+    But how does Restangular fit in to it?
+    </pre>
+  </body>
+</html>

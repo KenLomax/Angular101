@@ -1,0 +1,173 @@
+[
+  {
+    "name": "snapshot01",
+    "number": 1,
+    "message": "UX with plain old Javascript",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot01",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot01"
+  },
+  {
+    "name": "snapshot02",
+    "number": 2,
+    "message": "UX with Angular - 1-way data binding",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot02",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot02"
+  },
+  {
+    "name": "snapshot03",
+    "number": 3,
+    "message": "UX with Angular - 2-way data binding",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot03",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot03"
+  },
+  {
+    "name": "snapshot04",
+    "number": 4,
+    "message": "UX with Angular - Initializing the model",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot04",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot04"
+  },
+  {
+    "name": "snapshot05",
+    "number": 5,
+    "message": "UX with Angular - Angular Modules and the global Namespace",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot05",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot05"
+  },
+  {
+    "name": "snapshot06",
+    "number": 6,
+    "message": "Arrays in Angular",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot06",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot06"
+  },
+  {
+    "name": "snapshot07",
+    "number": 7,
+    "message": "Modifying Array",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot07",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot07"
+  },
+  {
+    "name": "snapshot08",
+    "number": 8,
+    "message": "UX with Angular - Adding, removing from an Array",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot08",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot08"
+  },
+  {
+    "name": "snapshot09",
+    "number": 9,
+    "message": "Complex Data Types",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot09",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot09"
+  },
+  {
+    "name": "snapshot10",
+    "number": 10,
+    "message": "Using Angular's http module",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot10",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot10"
+  },
+  {
+    "name": "snapshot11",
+    "number": 11,
+    "message": "Minificaton-proof Angular Code",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot11",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot11"
+  },
+  {
+    "name": "snapshot12",
+    "number": 12,
+    "message": "Notifications to and from Angular to the outside world - the problem",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot12",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot12"
+  },
+  {
+    "name": "snapshot13",
+    "number": 13,
+    "message": "Notifications to and from Angular to the outside world - the solution.",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot13",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot13"
+  },
+  {
+    "name": "snapshot14",
+    "number": 14,
+    "message": "Mutiple views in a SPA, with routing",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot14",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot14"
+  },
+  {
+    "name": "snapshot15",
+    "number": 15,
+    "message": "Angular Factories - modularising your code",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot15",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot15"
+  },
+  {
+    "name": "snapshot16",
+    "number": 16,
+    "message": "Restangular",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot16",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot16"
+  },
+   {
+    "name": "snapshot17",
+    "number": 17,
+    "message": "npm install..",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot17",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot17"
+  }
+]
+ 

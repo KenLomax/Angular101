@@ -1,0 +1,26 @@
+<html ng-app>
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+  </head>
+  <body>
+   <pre  style="background-color:#D1FFD1;">Note:  
+      2-way data-binding - easy - Angular looks after all the logistics
+      we can have any number of objects in our model
+   </pre>
+    
+    What is your first name? 
+    <input ng-model="name" type="text"/> <br>
+    And your full name 
+    First name: <input ng-model="name" type="text"/> 
+    Last name: <input ng-model="lastName" type="text"/>
+    <br>
+    My name's {{lastName}}, {{name}}  {{lastName}}<br>
+    <img src="https://docs.angularjs.org/img/Two_Way_Data_Binding.png">
+    <pre  style="background-color:#FFCCCC;">But..  
+     Can we initialize the model's data on page-load?
+    </pre>
+
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<html ng-app="MyAngularModule">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+      var myAngularModule = angular.module('MyAngularModule', []);
+      myAngularModule.controller('MyController', function ($scope){
+        $scope.firstName = 'John';
+        $scope.lastName = 'Smith';
+      });
+    </script>
+  </head>
+  <body ng-controller="MyController">
+
+  <pre  style="background-color:#D1FFD1;">Note:  
+    the ng-app directive references a <b>module</b>
+    the module wraps this controller (and other things) 
+  </pre>
+
+    First name:<input ng-model="firstName" type="text"/>
+    <br>
+    Last name:<input ng-model="lastName" type="text"/>
+    <br>
+    Hello {{firstName}} {{lastName}}
+
+    <pre  style="background-color:#FFCCCC;">But..  
+       This is very simple data.  How about arrays?
+    </pre>
+  </body>
+</html>

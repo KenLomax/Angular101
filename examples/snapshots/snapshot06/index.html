@@ -1,0 +1,32 @@
+<html ng-app="nameApp">
+
+<head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
+    <script>
+        var nameApp = angular.module('nameApp', []);
+        nameApp.controller('NameCtrl', function($scope) {
+            $scope.names = ['Larry', 'Curly', 'Moe'];
+        });
+    </script>
+</head>
+
+<body ng-controller="NameCtrl">
+
+    <pre style="background-color:#D1FFD1;">Note:  
+      assigning an array to names
+      using ng-repeat to create our html
+    </pre>
+
+    <ul>
+        <li ng-repeat="name in names">{{name}}</li>
+    </ul>
+
+    <pre style="background-color:#FFCCCC;">But..  
+      this is all very static - show me some movement..
+    </pre>
+
+</body>
+
+</html>
