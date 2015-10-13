@@ -28,8 +28,7 @@ So..
 * access http://localhost:8001/exampleViewer in browser
 
 ### And then to do exercises..
-* cd Angular101/Angular101Exercises
-* run a local server (as above)
+* http://localhost:8001/Angular101Exercises/snapshot01/index.html .. from snapshot02 to snapshot16
 * Fill in the missing code
 * Access your pages via a browser
 
