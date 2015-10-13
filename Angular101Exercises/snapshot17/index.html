@@ -1,0 +1,81 @@
+<html ng-app="nameApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular.js Example</title>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/restangular/dist/restangular.js"></script>
+    <script src="./node_modules/restangular/dist/restangular.min.js"></script>
+    <script src="./node_modules/restangular/dist/restangular.min.js"></script>
+    <script src="./node_modules/lodash/index.js"></script>
+    <script>
+      var nameApp = angular.module('nameApp',  ['restangular']);
+      
+      nameApp.config(function(RestangularProvider) {
+        //RestangularProvider.setBaseUrl('http://localhost:8080');
+        RestangularProvider.setBaseUrl('http://restangularexamplea.cfapps.io');
+      });
+
+      nameApp.controller('NameCtrl', function ($scope, Restangular){
+
+        $scope.getWishlists = function() {
+            Restangular.all('wishlists').getList().then( function(data) {
+              $scope.wishlists = data
+          });
+        }
+
+        $scope.addWishlist = function() {
+          console.log( "ABout to call $scope.wishlists.post")
+          var newWishList = { id: "", owner:"bb", title:$scope.enteredName}
+          $scope.wishlists.post ( newWishList ).then( function (){
+              $scope.getWishlists();
+          });
+        }
+
+        $scope.addWishlistItem = function( wishlistId ) {
+          var newWishListItem = {"product" : $scope.enteredName, "amount":"7"}
+          console.log("ABout to call put with "+ newWishListItem)
+          Restangular.one('wishlists', wishlistId).all('wishlistItems').post( newWishListItem ).then( function(){
+            $scope.getWishlists();
+          });
+         }
+
+        $scope.deleteWishlist = function( wishlistId ) {
+          Restangular.one('wishlists', wishlistId).remove().then( function(){
+            $scope.getWishlists();
+          });
+        }
+
+        $scope.getWishlists();
+
+      });
+
+
+    </script>
+  </head>
+  <body ng-controller="NameCtrl">
+  <pre  style="background-color:#D1FFD1;">Note:  
+    install npm, 
+    npm install angular
+    npm install restangular
+    npm install lodash
+    -> all are now found in ./node_modules
+
+  </pre>
+    Restangular.all('wishlists').getList()
+    <ul>
+      <li ng-repeat="wishlist in wishlists">{ Wishlist: title: {{wishlist.title}}, id: {{wishlist.id}} }  <a href="" ng-click="deleteWishlist(wishlist.id)">Delete</a> (Restangular.one('wishlists', wishlistId).remove())<br>
+      Items:
+        <ul> <li ng-repeat="item in wishlist.items">Product: {{item.product}}</li>
+        <li ><a href="" ng-click="addWishlistItem(wishlist.id)">Add Product</a> (Restangular.one('wishlists', wishlistId).all('wishlistItems')).post( newWishListItem )
+       </li>
+      </ul>    
+      </li> 
+    </ul>
+
+   Data: <input type="text" ng-model="enteredName"> <br>
+
+    <a href="" ng-click="addWishlist()">addWishlist</a> ($scope.wishlists.post ( newWishList ))
+
+   
+  </body>
+</html>

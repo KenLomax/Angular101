@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Plain Java One-way Data Binding</title>
+  </head>
+  <body>
+
+  <pre  style="background-color:#D1FFD1;">Challenge:  
+    To have <b>Rich UX</b> with <b>no page reloads</b> ("Single Page Apps - SPAs)"
+  </pre>
+
+    Plain old JavaScript approach:<br>
+    What is your name? <input id="textInputElement" type="text"/><br>
+    Well.. hello  <span id="nameSpanElement"></span>.  May I buy you a drink?
+
+    <script>
+      var textInputElement = document.getElementById('textInputElement');
+      var nameSpanElement   = document.getElementById('nameSpanElement');
+
+      textInputElement.addEventListener('keyup', function(){
+        var text = textInputElement.value;
+        nameSpanElement.innerHTML = text;
+      });
+    </script>
+
+    <pre  style="background-color:#FFCCCC;">But..  
+       Tightly coupled to DOM, 
+       delicated Javascript, 
+       too low level
+    </pre>
+  </body>
+</html>
