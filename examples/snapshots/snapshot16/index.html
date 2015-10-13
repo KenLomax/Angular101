@@ -11,18 +11,15 @@
       var nameApp = angular.module('nameApp',  ['restangular']);
       
       nameApp.config(function(RestangularProvider) {
-        //RestangularProvider.setBaseUrl('http://localhost:8080');
-        RestangularProvider.setBaseUrl('http://restangularexamplea.cfapps.io');
+        RestangularProvider.setBaseUrl('http://localhost:8080');
+        //RestangularProvider.setBaseUrl('http://restangularexamplea.cfapps.io');
       });
-
       nameApp.controller('NameCtrl', function ($scope, Restangular){
-
         $scope.getWishlists = function() {
             Restangular.all('wishlists').getList().then( function(data) {
               $scope.wishlists = data
           });
         }
-
         $scope.addWishlist = function() {
           console.log( "ABout to call $scope.wishlists.post")
           var newWishList = { id: "", owner:"bb", title:$scope.enteredName}
@@ -30,7 +27,6 @@
               $scope.getWishlists();
           });
         }
-
         $scope.addWishlistItem = function( wishlistId ) {
           var newWishListItem = {"product" : $scope.enteredName, "amount":"7"}
           console.log("ABout to call put with "+ newWishListItem)
@@ -38,23 +34,17 @@
             $scope.getWishlists();
           });
          }
-
         $scope.deleteWishlist = function( wishlistId ) {
           Restangular.one('wishlists', wishlistId).remove().then( function(){
             $scope.getWishlists();
           });
         }
-
         $scope.getWishlists();
-
       });
-
-
     </script>
   </head>
   <body ng-controller="NameCtrl">
   <pre  style="background-color:#D1FFD1;">Note:  
-    Created a WishList Service and deployed to PWS @ http://restangularexamplea.cfapps.io
     included Restangular Libraries
     included 'restangular' in the modules list of dependencies
     we can now inject the Restangular object ito our functions and use it
@@ -75,6 +65,8 @@
     <a href="" ng-click="addWishlist()">addWishlist</a> ($scope.wishlists.post ( newWishList ))
    <pre  style="background-color:#FFCCCC;">But..  
    what is this npm thingy?
+
+   <a href="" ng-click="getWishlists()">GetWishLists</a>
     </pre>
 
     <pre>
