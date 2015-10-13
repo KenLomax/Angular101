@@ -2,7 +2,7 @@
 hybris Angular JS Workshop, Adapted from Curran Kelleher's Material
 
 
-## Why?
+### Why?
 
 The YaaS Builder assumes a lot of knowledge...
 Angular 
@@ -13,7 +13,7 @@ NodeJS
 Javascript..
 So..
 
-## We shall explain Angular, Restangular, nodes, npm in isolation without the noise...
+### We shall explain Angular, Restangular, nodes, npm in isolation without the noise...
 
 ###To run locally:
 >
@@ -27,5 +27,11 @@ So..
   sudo npm install http-server -g
   http-server
 * access http://localhost:8001/exampleViewer/index.html# in browser
+
+### To do exercises
+* cd Angular101/Angular101Exercises
+* run a local server (as above)
+* Fill in the missing code
+* Access your pages via a browser
 
 
