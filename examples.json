@@ -1,5 +1,15 @@
 [
   {
+    "name": "snapshot00",
+    "number": 0,
+    "message": "Workshop format..",
+    "files": [
+      "index.html"
+    ],
+    "url": "http://localhost:8001/examples/snapshots/snapshot00",
+    "runUrl": "http://localhost:8001/examples/snapshots/snapshot00"
+  },
+  {
     "name": "snapshot01",
     "number": 1,
     "message": "UX with plain old Javascript",

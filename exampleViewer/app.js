@@ -29,7 +29,7 @@ app.factory('examples', function($http){
     list: getData,
     find: function(exampleNumber, callback){
       getData(function(data) {
-        var index = parseInt(exampleNumber) - 1;
+        var index = parseInt(exampleNumber) /*- 1*/;
         callback(data[index]);
       });
     }
@@ -56,7 +56,7 @@ app.controller('MainCtrl', function ($scope, $document, $location, examples){
         // Increment or decrement the example number.
         if(e.keyCode === RIGHT && n < examples.length){
           n++;
-        } else if(e.keyCode === LEFT && n > 1) {
+        } else if(e.keyCode === LEFT && n > 0) {
           n--;
         }
         
