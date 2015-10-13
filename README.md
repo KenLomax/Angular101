@@ -25,7 +25,7 @@ So..
     * Download Node (https://nodejs.org/en/download/)
     * sudo npm install http-server -g
     * http-server
-* access http://localhost:8001/exampleViewer/index.html# in browser
+* access http://localhost:8001/exampleViewer in browser
 
 ### And then to do exercises..
 * cd Angular101/Angular101Exercises
