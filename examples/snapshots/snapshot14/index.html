@@ -11,11 +11,11 @@
       
         $routeProvider.
           when('/', {
-            template: '<h3>View 1:</h3> <ul><li ng-repeat="country in countries"><a href="#/{{country.name}}">{{country.name}}</a></li><ul>',
+            template: '<h3>View 1:</h3> <ul><li ng-repeat="country in countries">            <a href="#/{{country.name}}">{{country.name}}</a>, population: {{country.population}}</li><ul>',
             controller: 'CountryListCtrl'
           }).
           when('/:countryName', {
-            template: '<h3>View 2:</h3>' ,
+            template: '<h3>View 2:</h3><a href="#/">Take me back </a>',
             controller: 'CountryDetailCtrl'
           }).
           otherwise({
@@ -30,17 +30,16 @@
       });
 
       myModule.controller('CountryDetailCtrl', function ($scope, $routeParams){
-        console.log("$routeParams object is: ");
-        console.log($routeParams);
+        console.log("$routeParams object is: "+$routeParams);
       });
     </script>
   </head>
   <body>
  <pre  style="background-color:#D1FFD1;">Note:  
-    including router library
+    including router library and dependency
     ng-view directive
-    using *config* in our module
-    added routeProvider injection
+    the # character in the path 
+    using *config* in our module to set up the routing, with a function that is injected with routeProvider 
     routeProvider maps path to view & controller 
     path can have place holders
     can use template, or templateUrl
@@ -50,8 +49,11 @@
 
     <div ng-view></div>
 
-   <pre  style="background-color:#FFCCCC;">But..  
-
+   <pre  style="background-color:#FFCCCC;">
+   Try..
+      display the country name on the second page 
+   But..  
+      How can we incapsulate functoinality futher?
     </pre>
   </body>
 </html>

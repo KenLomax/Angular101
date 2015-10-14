@@ -6,7 +6,7 @@
     <script>
       var nameApp = angular.module('nameApp', []);
       nameApp.controller('NameCtrl', function ($scope){
-        $scope.names = ['Larry', 'Curly', 'Moe'];
+        $scope.names = ['Larry', 'Curly', 'Moe', 'Moe'];
 
         $scope.addName = function() {
           $scope.names.push($scope.enteredName);
@@ -26,8 +26,14 @@
       <input type="text" ng-model="enteredName">
       <input type="submit" value="add">
     </form>
-   <pre  style="background-color:#FFCCCC;">But..  
-   a little too simple, how about removing and insterting data?
+   <pre  style="background-color:#FFCCCC;">
+   Try..
+    what happens if ng-submit points to non-existing function?
+    what happens if you try to add two elements with the same name?
+    what happens if initialize your array with two elements sharing the same name?
+
+   But..  
+   a little too simple, how about removing and inserting data?
     </pre>
   </body>
 </html>

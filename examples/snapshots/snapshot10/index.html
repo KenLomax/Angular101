@@ -3,9 +3,9 @@
     <meta charset="utf-8">
     <title>Angular.js Example</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
-    <script>
+    <script>     
       var countryApp = angular.module('countryApp', []);
-      countryApp.controller('CountryCtrl', function ($scope, $http){
+      countryApp.controller('CountryCtrl', function ( $scope, $http ){
         $http.get('countries.json').success(function(data) {
           $scope.countries = data;
         });
@@ -36,8 +36,13 @@
         <td>{{country.name}}</td>
         <td>{{country.population}}</td>
       </tr>
+
     </table>
-  <pre  style="background-color:#FFCCCC;">But..  
+  <pre  style="background-color:#FFCCCC;">
+  Try..
+    reordering the scope and http input arguments
+
+  But..  
   Injection works by recognizing key words like "$scope", "$http".  How do we make our code "minification proof"?
   </pre>
   </body>

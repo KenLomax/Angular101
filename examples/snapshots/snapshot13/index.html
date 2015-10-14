@@ -9,7 +9,7 @@
         $scope.firstName = 'John';
 
         $scope.$watch('lastName', function(newValue, oldValue){
-          console.log('new value is ' + newValue);
+          console.log('old value was ' + oldValue +' new value is ' + newValue);
         });
 
         setTimeout(function(){
@@ -30,8 +30,11 @@
     <br>
     Hello {{firstName}} {{lastName}}
 
-      <pre  style="background-color:#FFCCCC;">But..  
-    This is all one view - can I have mulipled "tabs"/"views"?
+      <pre  style="background-color:#FFCCCC;">
+    Try.. 
+      Can you get Angular to report an infinite loop here?
+    But..  
+    This is all in one view - can I have muliple "tabs"/"views"?
     </pre>
   </body>
 </html>

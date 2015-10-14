@@ -5,7 +5,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js"></script>
     <script>
       var myAngularModule = angular.module('MyAngularModule', []);
-      myAngularModule.controller('MyController', function ($scope){
+      myAngularModule.controller('MyController', function ( $scope ){
         $scope.firstName = 'John';
         $scope.lastName = 'Smith';
       });
@@ -24,7 +24,11 @@
     <br>
     Hello {{firstName}} {{lastName}}
 
-    <pre  style="background-color:#FFCCCC;">But..  
+    <pre  style="background-color:#FFCCCC;">
+      Try..
+        What happens if we rename the $scope field - does that ruin the injection?
+        There are other types we can inject, for example $http - what happens if we place that before $scope?
+      But..  
        This is very simple data.  How about arrays?
     </pre>
   </body>
