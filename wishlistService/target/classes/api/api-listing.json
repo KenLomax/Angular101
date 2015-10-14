@@ -1,0 +1,14 @@
+{
+    "name": "hybris Service",
+    "references":[
+        {
+            "namespace": "api",
+            "description": "API definition of restangularexamplea",
+            "path": "/",
+            "type": "raml",
+            "fileName": "restangularexamplea.raml",
+            "packageName": "com.restangular.example.api.generated",
+            "async": false
+        }
+    ]
+}

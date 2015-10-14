@@ -1,0 +1,11 @@
+com/restangular/example/api/generated/Detail.class
+com/restangular/example/api/generated/Wishlist.class
+com/restangular/example/api/generated/util/OneOfDeserializerUtility.class
+com/restangular/example/JerseyApplication.class
+com/restangular/example/api/generated/ApiFeature.class
+com/restangular/example/api/generated/Error.class
+com/restangular/example/api/generated/WishlistItem.class
+com/restangular/example/api/generated/DefaultWishlistsResource.class
+com/restangular/example/api/generated/WishlistsResource.class
+com/restangular/example/api/generated/YaasAwareParameters.class
+com/restangular/example/api/generated/Wishlist$DescriptionOneOfDeserializer.class

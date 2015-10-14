@@ -54,12 +54,13 @@
   </head>
   <body ng-controller="NameCtrl">
   <pre  style="background-color:#D1FFD1;">Note:  
-    install node, 
-    npm install angular
-    npm install restangular
-    npm install lodash
+    install node,
+    and run
+      npm install angular
+      npm install restangular
+      npm install lodash
     -> all are now found in ./node_modules and can be included from there, rather than from //cdn....
-
+      so we can include from here, rather than over the web
   </pre>
     Restangular.all('wishlists').getList()
     <ul>
@@ -76,6 +77,20 @@
 
     <a href="" ng-click="addWishlist()">addWishlist</a> ($scope.wishlists.post ( newWishList ))
 
+    <pre>
+    Imagine you want to share your lovely solution with others...
+    <b>Try out npm further:</b>
+      run npm init
+      look at package.json - where npm describes the dependencies for your project
+      run npm install backbone 
+      look at packate.json - note it has <b>not</b> been added, trying running with -S flag
+
+    <b>Now see the power of npm:</b>
+      delete your node_modules
+      rerun npm install
+      see your new node_modules directory :)
+
+    </pre>
    
   </body>
 </html>
