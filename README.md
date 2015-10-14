@@ -2,7 +2,7 @@
 hybris Angular JS Workshop, Adapted from Curran Kelleher's Material
 
 
-Why?
+### Why?
 
 The YaaS Builder assumes a lot of knowledge...
 Angular 
@@ -11,17 +11,25 @@ Builder
 npm
 NodeJS
 Javascript..
+So..
 
-We shall explain Angular, Restangular, nodes, npm in isolation without the noise...
+### We shall explain Angular, Restangular, nodes, npm in isolation without the noise...
 
-To run locally:
+###To run locally..
+* git clone https://github.com/KenLomax/Angular101.git
+* cd Angular101
+* run a local server 
+  * Option with Python: Use Python on Mac: 
+    * python -m SimpleHTTPServer 8001 
+  * Option with Node: 
+    * Download Node (https://nodejs.org/en/download/)
+    * sudo npm install http-server -g
+    * http-server
+* access http://localhost:8001/exampleViewer in browser
 
-git clone https://github.com/KenLomax/Angular101.git
-
-cd Angular101
-
-run local server (Eg: > python -m SimpleHTTPServer 8001 )
-
-access http://localhost:8001/exampleViewer/index.html# in browser
+### And then to do exercises..
+* http://localhost:8001/Angular101Exercises/snapshot01/index.html .. from snapshot02 to snapshot16
+* Fill in the missing code
+* Access your pages via a browser
 
 
